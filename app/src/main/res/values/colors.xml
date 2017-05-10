@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/grey_trans</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="yellow">#F6A623</color>
+
+    <color name="violet">#673AB7</color>
+    <color name="violet_trans_80">#BF673AB7</color>
+
+
+    <color name="orange">#F07B3F</color>
+
+    <color name="grey">#949494</color>
+    <color name="red">#FE3824</color>
+    <color name="red_logout">#E95354</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparent_80">#BFFFFFFF</color>
+
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="chrome_grey">#F2F2F2</color>
+    <color name="txt_profile">#2C4058</color>
+
+
+    <!--shimmer-->
+    <color name="demo_light_transparent">#16000000</color>
+    <color name="demo_dark_transparent">#24000000</color>
+
+
+
+    <color name="black">#000000</color>
+
+    <color name="black_25_transparent">#40000000</color>
+
+    <color name="transparent">#00000000</color>
+
+
+    <color name="grey_trans">#c7c7c7</color>
+
+
+    <color name="green">#70c050</color>
+
+
+
+
+</resources>
