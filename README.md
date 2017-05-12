@@ -18,7 +18,7 @@ Customising text sizes and icon sizes are like a nightmare (Just try adding smal
 
  Demo I |      Demo II
 -------- | ---
-<a href="http://imgur.com/ParT0sR"><img src="http://i.imgur.com/ParT0sR.gif" title="source: imgur.com" /></a> | !
+<a href="http://imgur.com/ParT0sR"><img src="http://i.imgur.com/ParT0sR.gif" title="source: imgur.com" /></a> |
 <a href="http://imgur.com/4CqPkF6"><img src="http://i.imgur.com/4CqPkF6.gif" title="source: imgur.com" /></a>
  
 
