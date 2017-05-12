@@ -73,6 +73,7 @@ public class HomeFragment extends BaseFragment {
         btnClickMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (mFragmentNavigation != null) {
                     mFragmentNavigation.pushFragment(HomeFragment.newInstance(fragCount + 1));
 

@@ -17,6 +17,7 @@ import com.f22labs.instalikefragmenttransaction.fragments.HomeFragment;
 import com.f22labs.instalikefragmenttransaction.fragments.ShareFragment;
 import com.f22labs.instalikefragmenttransaction.fragments.ProfileFragment;
 import com.f22labs.instalikefragmenttransaction.fragments.SearchFragment;
+import com.f22labs.instalikefragmenttransaction.utils.FragmentHistory;
 import com.f22labs.instalikefragmenttransaction.utils.Utils;
 import com.f22labs.instalikefragmenttransaction.views.FragNavController;
 
@@ -41,7 +42,6 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
             R.drawable.tab_profile};
 
 
-
     @BindArray(R.array.tab_name)
     String[] TABS;
 
@@ -50,8 +50,7 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
 
     private FragNavController mNavController;
 
-    private boolean isClose;
-
+    private FragmentHistory fragmentHistory;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,6 +65,8 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
 
         initTab();
 
+        fragmentHistory = new FragmentHistory();
+
 
         mNavController = FragNavController.newBuilder(savedInstanceState, getSupportFragmentManager(), R.id.content_frame)
                 .transactionListener(this)
@@ -78,6 +79,8 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
         bottomTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+
+                fragmentHistory.push(tab.getPosition());
 
                 switchTab(tab.getPosition());
 
@@ -163,7 +166,7 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
 
 
             case android.R.id.home:
@@ -185,14 +188,44 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
             mNavController.popFragment();
         } else {
 
-            if (isClose)
+            if (fragmentHistory.isEmpty()) {
                 super.onBackPressed();
-            else
-                Utils.showToast(MainActivity.this, "Tap back again to exit");
-            isClose = true;
+            } else {
+
+
+                if (fragmentHistory.getStackSize() > 1) {
+
+                    int position = fragmentHistory.popPrevious();
+
+                    switchTab(position);
+
+                    updateTabSelection(position);
+
+                } else {
+
+                    switchTab(0);
+
+                    updateTabSelection(0);
+
+                    fragmentHistory.emptyStack();
+                }
+            }
+
         }
     }
 
+
+    private void updateTabSelection(int currentTab){
+
+        for (int i = 0; i <  TABS.length; i++) {
+            TabLayout.Tab selectedTab = bottomTabLayout.getTabAt(i);
+            if(currentTab != i) {
+                selectedTab.getCustomView().setSelected(false);
+            }else{
+                selectedTab.getCustomView().setSelected(true);
+            }
+        }
+    }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -268,7 +301,7 @@ public class MainActivity extends BaseActivity implements BaseFragment.FragmentN
 //    }
 
 
-    public void updateToolbarTitle(String title){
+    public void updateToolbarTitle(String title) {
 
 
         getSupportActionBar().setTitle(title);
