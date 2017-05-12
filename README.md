@@ -2,7 +2,7 @@
 Easy Bottom Tab Navigation with back stack history
 
 
-InstaLikeFragmentTransaction is an\ open source repository with custom Bottom tab Fragment backstack transaction and stack history for Tabs.
+InstaLikeFragmentTransaction is an open source repository with custom Bottom tab Fragment backstack transaction and stack history for Tabs.
 
 What inspired me to write this post ?
 -------------------------------------
