@@ -28,6 +28,5 @@ Why TabLayout instead of Design support BottomNavigationView?
 3. Customising text sizes and icon sizes are like a nightmare (Just try adding small sized icon for one tab and big sized icon for the other ;-) ).
 
 
-
-
+For a tutorial, refer my blog post on https://blog.f22labs.com/instagram-like-bottom-tab-fragment-transaction-android-389976fb8759 
 
