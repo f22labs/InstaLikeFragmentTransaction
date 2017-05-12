@@ -16,7 +16,7 @@ Fragment Child nested fragments push (CLICK ME) and pop (Back arrow pressed) beh
 <a href="http://imgur.com/ParT0sR"><img src="http://i.imgur.com/ParT0sR.gif" title="source: imgur.com"/></a>
 
 
-Fragment History Behaviour on back hardward soft key pressed
+Fragment History Behaviour on back hardware soft key pressed
 ------------------------------------------------------------
 
 <a href="http://imgur.com/4CqPkF6"><img src="http://i.imgur.com/4CqPkF6.gif" title="source: imgur.com"/></a>
