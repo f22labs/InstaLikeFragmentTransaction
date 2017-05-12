@@ -16,9 +16,14 @@ It’s not flexible.
 Random behaviour if there are less tab items.
 Customising text sizes and icon sizes are like a nightmare (Just try adding small sized icon for one tab and big sized icon for the other ;-) ).
 
- Demo I |      Demo II
--------- | ---
-<a href="http://imgur.com/ParT0sR"><img src="http://i.imgur.com/ParT0sR.gif" title="source: imgur.com" height="240" width="320"/></a> |
-<a href="http://imgur.com/4CqPkF6"><img src="http://i.imgur.com/4CqPkF6.gif" title="source: imgur.com" height="240" width="320"/></a>
+
+Fragment Child nested fragments push (CLICK ME) and pop (Back arrow pressed) behaviour
+
+<a href="http://imgur.com/ParT0sR"><img src="http://i.imgur.com/ParT0sR.gif" title="source: imgur.com"/></a>
+
+
+Fragment History Behaviour on back hardward soft key pressed:
+
+<a href="http://imgur.com/4CqPkF6"><img src="http://i.imgur.com/4CqPkF6.gif" title="source: imgur.com"/></a>
  
 
